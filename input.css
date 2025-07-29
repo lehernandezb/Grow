@@ -14,12 +14,26 @@
     width: 600px;
     border-radius: 40px;
     border-color: azure;
-    border-width: 10px;
+    border-width: 7px;
+}
+
+.Screen{
+    background-color: azure;
+    height: 950px;
+    width: 500px;
+    margin-top: 50px;
+    border-radius: 15px;
 }
 
 .Header {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    margin-top: 60px;
+    gap: 20px;
+}
+
+.Text {
+    font-family: "Roboto", sans-serif;
+    
 }
