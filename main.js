@@ -1,8 +1,8 @@
 const startButton = document.getElementById("Start");
+const pauseButton = document.getElementById("Pause");
+const restartButton = document.getElementById("Restart");
 const hourInput = document.getElementById("Hour");
 const minuteInput = document.getElementById("Minute")
-
-let start = false;
 
 function timeToDisplay(minute) {
     let remainder = minute % 60
@@ -17,7 +17,6 @@ function addZero(int){
         return int.toString();
     }
 }
-
 
 const toggleCountdown = () => {
     const countDown = document.getElementById("Countdown");
@@ -46,7 +45,15 @@ const toggleCountdown = () => {
 
 }
 
+const addRestartAndPause = () => {
+    if (startButton.style.display = 'flex'){
+        startButton.style.display = 'none';
+        pauseButton.style.display = 'flex';
+        restartButton.style.display = 'flex'
+    }
+}
+
 startButton.addEventListener("click",() => {
-    start = true;
     toggleCountdown();
+    addRestartAndPause();
 });

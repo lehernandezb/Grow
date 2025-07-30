@@ -120,3 +120,16 @@
     font-weight: 1000;
     color: rgb(64, 152, 132);
 }
+
+.button2 {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.Start{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
