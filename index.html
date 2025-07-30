@@ -8,16 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delius&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Delius&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body class="Body">
     <div class="Background">
         <div class="Header">
             <p class="Text">How long do you plan to study for?</p>
-            <input type="">
+            <div class="Timer">
+                <input type="number" min="0" max="23" placeholder="Hour" class="Time">
+                <p class="dot">:</p>
+                <input type="number" min="0" max="59" placeholder="Minute" class="Time">
+            </div>
         </div>
 
         <div class="Screen">
-
         </div>
     </div>
     <script src="main.js"></script>

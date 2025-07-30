@@ -23,17 +23,56 @@
     width: 500px;
     margin-top: 50px;
     border-radius: 15px;
+    border-color: rgb(64, 152, 132);
+    border-style: solid;
 }
 
 .Header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin-top: 60px;
-    gap: 20px;
+    gap: 0px;
 }
 
 .Text {
-    font-family: "Roboto", sans-serif;
-    
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 1000;
+    color: rgb(64, 152, 132);
+    border-color: white;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.Timer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Time {
+    height: 30px;
+    width: 200px;
+    padding-top: 0;
+    margin-top: 0;
+    border-color: rgb(64, 152, 132);
+    border-style: solid;
+    border-radius: 20px;
+    font-family: "Delius", cursive;
+    font-weight: 1000;
+    font-size: 15px;
+    font-style: normal;
+    text-align: center;
+}
+
+.dot {
+    color: rgb(64, 152, 132);
+    font-family: "Delius", cursive;
+    font-weight: 1000;
+    font-size: 40px;
+    font-style: normal;
 }
