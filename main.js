@@ -3,11 +3,18 @@ const pauseButton = document.getElementById("Pause");
 const restartButton = document.getElementById("Restart");
 const hourInput = document.getElementById("Hour");
 const minuteInput = document.getElementById("Minute")
+const countDown = document.getElementById("Countdown");
 
-function timeToDisplay(minute) {
-    let remainder = minute % 60
-    let hour = (minute - remainder) / 60;
-    return addZero(hour) + " : " + addZero(remainder);
+let timer = null;
+let timeLeft = 0;
+let isRunning = false;
+
+function timeToDisplay(second) {
+    const remainder = second % 60
+    const remainder2 = second % 3600
+    const minute = ((second - remainder) / 60) % 60;
+    const hour = (second - remainder2) / 3600;
+    return addZero(hour) + " : " + addZero(minute) + " : " + addZero(remainder);
 }
 
 function addZero(int){
@@ -19,29 +26,20 @@ function addZero(int){
 }
 
 const toggleCountdown = () => {
-    const countDown = document.getElementById("Countdown");
-    if (countDown.style.display === 'flex'){
-        countDown.style.display = 'none';
-    } else {
-        countDown.style.display = 'flex';
+    if (isRunning) {
+        countDown.innerText = timeToDisplay(timeLeft);
+
+        timer = setInterval(() => {
+            timeLeft--;
+            countDown.innerText = timeToDisplay(timeLeft);
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                countDown.innerText = "00 : 00 : 00"
+            }
+
+        }, 1000);
     }
-
-    const hour = parseInt(hourInput.value) || 0;
-    const minute = parseInt(minuteInput.value) || 0;
-    let time = minute + (hour * 60);
-
-    countDown.innerText = timeToDisplay(time);
-
-    const timer = setInterval(() => {
-        time--;
-        countDown.innerText = timeToDisplay(time);
-
-        if (time <= 0) {
-            clearInterval(timer);
-            countDown.innerText = "00 : 00"
-        }
-
-    }, 60000);
 
 }
 
@@ -54,6 +52,28 @@ const addRestartAndPause = () => {
 }
 
 startButton.addEventListener("click",() => {
+    const hour = parseInt(hourInput.value) || 0;
+    const minute = parseInt(minuteInput.value) || 0;
+
+    timeLeft = (minute + hour * 60) * 60;
+    countDown.style.display = 'flex';
+    isRunning = true;
+
+    clearInterval(timer);
     toggleCountdown();
     addRestartAndPause();
+});
+
+pauseButton.addEventListener("click", () => {
+    if (timeLeft <= 0) return;
+
+    if (isRunning) {
+        clearInterval(timer);
+        isRunning = false;
+        pauseButton.innerText = "Resume Time";
+    } else {
+        isRunning = true;
+        pauseButton.innerText = "Pause Time";
+        toggleCountdown();
+    }
 });
