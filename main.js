@@ -77,3 +77,14 @@ pauseButton.addEventListener("click", () => {
         toggleCountdown();
     }
 });
+
+restartButton.addEventListener("click", () => {
+    const hour = parseInt(hourInput.value) || 0;
+    const minute = parseInt(minuteInput.value) || 0;
+
+    timeLeft = (minute + hour * 60) * 60;
+    isRunning = true;
+
+    clearInterval(timer);
+    toggleCountdown();
+});
