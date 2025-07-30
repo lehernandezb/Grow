@@ -1,0 +1,29 @@
+.socials-div {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr;
+    place-content: center;
+    gap: 0;
+    background-color: rgb(151, 151, 151);
+    height: 70px;
+    width: 520px;
+    border-radius: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.socials-text {
+    place-content: center;
+    margin-left: 0;
+    color: white;
+    font-family: "Delius", cursive;
+}
+
+.img {
+    place-content: center;
+    margin-right: 0;
+    filter: invert(100%);
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    margin-right: 0;
+}
