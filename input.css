@@ -10,7 +10,7 @@
     align-items: center;
     flex-direction: column;
     background-color: rgb(149, 255, 211);
-    height: 1200px;
+    height: 900px;
     width: 600px;
     border-radius: 40px;
     border-color: azure;
@@ -19,7 +19,7 @@
 
 .Screen{
     background-color: azure;
-    height: 950px;
+    height: 550px;
     width: 500px;
     margin-top: 50px;
     border-radius: 15px;
@@ -52,6 +52,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    height: 40px;
 }
 
 .Time {
@@ -67,6 +68,7 @@
     font-size: 15px;
     font-style: normal;
     text-align: center;
+    color:  rgb(64, 152, 132);;
 }
 
 .dot {
@@ -75,4 +77,19 @@
     font-weight: 1000;
     font-size: 40px;
     font-style: normal;
+}
+
+.button{
+    margin-top: 20px;
+    height: 30px;
+    width: 200px;
+    color:  rgb(64, 152, 132);
+    border-color: rgb(64, 152, 132);
+    border-style: solid;
+    border-radius: 20px;
+    font-family: "Delius", cursive;
+    font-weight: 1000;
+    font-size: 15px;
+    font-style: normal;
+    text-align: center;
 }
