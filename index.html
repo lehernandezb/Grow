@@ -15,6 +15,7 @@
 <body class="Body">
     <div class="Background">
         <div class="Header">
+        <img src="logo.png" class="logo">
             <p class="Text">How long do you plan to study for?</p>
             <div class="Timer">
                 <input type="number" min="0" max="23" placeholder="Hour" class="Time">
@@ -23,9 +24,10 @@
             </div>
         </div>
         <div class="Start">
-            <button class="button"> Start Time </button>
+            <button class="button" id="Start"> Start Time </button>
         </div>
         <div class="Screen">
+            <p class="Countdown" id="Countdown">0:00</p>
         </div>
     </div>
     <script src="main.js"></script>

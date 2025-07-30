@@ -19,7 +19,7 @@
 
 .Screen{
     background-color: azure;
-    height: 550px;
+    height: 500px;
     width: 500px;
     margin-top: 50px;
     border-radius: 15px;
@@ -92,4 +92,31 @@
     font-size: 15px;
     font-style: normal;
     text-align: center;
+    background-color: white;
+}
+
+.button:hover {
+    color:  rgb(103, 218, 191);
+    background-color: rgb(252, 252, 252);
+}
+
+.button:active {
+    opacity: 80%;
+    width: 198px;
+}
+
+.logo {
+    height: 60px;
+    margin-bottom: 0;
+}
+
+.Countdown {
+    display: none;
+    justify-content: center;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 1000;
+    color: rgb(64, 152, 132);
 }
