@@ -35,7 +35,7 @@ const toggleCountdown = () => {
 
             if (timeLeft <= 0) {
                 clearInterval(timer);
-                countDown.innerText = "00 : 00 : 00"
+                countDown.innerText = "00 : 00 : 00 \n Time is Up!"
             }
 
         }, 1000);
